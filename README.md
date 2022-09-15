@@ -1,4 +1,4 @@
-# Record user data 
+# Serviço para registro de usuarios
 
 ## Funcionalidades
 - Recebe informações do usuario em um ``JSON`` via ``POST``
