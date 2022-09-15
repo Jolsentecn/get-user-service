@@ -7,7 +7,7 @@
 
 ## Como utilizar??
 
-1. Recebe via ``POST`` o seguinte ``JSON`:
+1. Recebe via ``POST`` o seguinte ``JSON``:
 ```
 {
     "name": "João Vitor Olsen",
