@@ -1,6 +1,7 @@
 import { User } from "../../entities/User";
 import { IUserRepository } from "../../repositories/IUserRepository";
 import { ICreateUserRequestDTO } from "./CreateUserDTO";
+import { publisher } from "../../services/redis.service";
 
 export class CreateUserUseCase {
     constructor(
@@ -21,7 +22,11 @@ export class CreateUserUseCase {
         }
 
         var result = await this.userRepository.create(user);
-        
+
+        await publisher.connect();
+
+        await publisher.publish('user', JSON.stringify(result));
+
         return result;
     }
 

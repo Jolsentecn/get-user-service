@@ -1,5 +1,4 @@
-import express from "express";
-import { collections, connectToDatabase } from "./services/database.service"
+import { connectToDatabase } from "./services/database.service"
 import { app } from './app';
 import { usersRouter } from "./routes/user.routes";
 
